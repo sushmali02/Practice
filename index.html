@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+        }
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: #ff3366;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #e6005c;
+        }
+        .love-message {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Gallery Styles */
+        .memory-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .memory {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            width: 100%;
+        }
+        .memory:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .memory img {
+            width: 45%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(255, 105, 180, 0.6);
+        }
+        .memory p {
+            width: 50%;
+            font-size: 1.3rem;
+            font-style: italic;
+            padding: 20px;
+        }
+        .gallery-btn-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .gallery-btn {
+            background-color: #ff4d79;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0px 4px 10px rgba(255, 105, 180, 0.6);
+            transition: all 0.3s ease;
+        }
+        .gallery-btn:hover {
+            background-color: #ff1a66;
+            box-shadow: 0px 6px 15px rgba(255, 105, 180, 0.9);
+        }
+        #gallery h1 { /* Style for the gallery heading */
+            text-align: center; /* Center the text */
+            margin-bottom: 20px; /* Add some space below */
+        }
+        #gallery {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Happy Valentine’s Day, my makad! ❤️🌹💋</h1>
+            <div class="love-message">
+                <p>When I first met you, I was suffering from fear—fear of losing someone even before having them. But as time passed, I realized that you are the only girl with whom I can truly spend my life. 💑✨💖 Sometimes, I overthink, but it’s only because I never want to lose you. There were moments when I hesitated to meet frequently, but it wasn’t because I didn’t want to—it was my own fear of getting too attached and then losing you. But now, after these two months of longing and missing you every single day, I know one thing for sure—you are mine, and nothing can change that. 💞💘</p>
+                <p>I miss you so much, especially your cute nose 👃🥰, your lovely smell 🌸💫, and those beautiful eyes hidden behind your chashma 👀👓💖. Every little thing about you stays in my heart 💗, making me long for the moment we meet again and I can hold you close 🤗💏. I don’t just want to be with you for a few days, months, or years—I want to spend my entire life by your side 💍👫, exploring this beautiful journey together, hand in hand. 🚀💑💞</p>
+                <p>My Gulabjamun 💕, my happiness 😘, my forever 💖. <strong>Happy Valentine’s Day, my ladu!</strong> 💕💋😍</p>
+            </div>
+            <button id="showGalleryBtn" class="btn btn-custom btn-lg mt-3">See Our Memories</button>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h1>Our Beautiful Memories</h1>
+        <div class="memory-container">
+            <div class="memory">
+                <img src="image/img3.jpg" alt="Memory 1">
+                <p>True love isn't about being inseparable; it's about being separated and nothing changes. Every moment with you is a treasure, a memory that time can never fade. ❤️💕</p>
+            </div>
+            <div class="memory">
+                <img src="image/img2.jpg" alt="Memory 2">
+                <p>With you, I have found the kind of love that I never knew existed. You are my sunshine on the darkest days, the reason behind my smile. ☀️😍</p>
+            </div>
+            <div class="memory">
+                <img src="image/img1.jpg" alt="Memory 3">
+                <p>Every love story is special, unique, and beautiful—but ours is my favorite. Each memory we create adds a new page to our beautiful journey. 📖💖</p>
+            </div>
+            <div class="memory">
+                <img src="image/img4.jpg" alt="Memory 4">
+                <p>They say when you meet the right person, you just know. From the moment I met you, my heart knew you were the one meant for me. 💘✨</p>
+            </div>
+            <div class="memory">
+                <img src="image/img5.jpg" alt="Memory 5">
+                <p>Love is not just about saying 'I love you.' It’s about showing it every day in the smallest of ways. Thank you for making every moment magical. 💞💑</p>
+            </div>
+            <div class="memory">
+                <img src="image/img6.jpg" alt="Memory 6">
+                <p>Every day with you is a new adventure. You are my dream come true, my love story, my happily ever after. 🌹🥰</p>
+            </div>
+        </div>
+        <div class="gallery-btn-container">
+            <button id="showHomeBtn" class="btn gallery-btn">Back to Home</button>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const homeSection = document.getElementById('home');
+        const gallerySection = document.getElementById('gallery');
+        const showGalleryBtn = document.getElementById('showGalleryBtn');
+        const showHomeBtn = document.getElementById('showHomeBtn');
+
+        showGalleryBtn.addEventListener('click', () => {
+            homeSection.style.display = 'none';
+            gallerySection.style.display = 'block';
+        });
+
+        showHomeBtn.addEventListener('click', () => {
+            gallerySection.style.display = 'none';
+            homeSection.style.display = 'block';
+        });
+        gallerySection.style.display = 'none'; // Hide Gallery initially
+
+    </script>
+</body>
+</html>
